@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="icon" href="http://store-images.s-microsoft.com/image/apps.10595.14397430983184912.cfdf6f70-0a34-4999-b494-936559d822c3.7355576f-baf9-4be3-8b34-27bdc6ac1bd2">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <section id="main">
+        <div id="main-div" class="bg-primary w-section text-shadow">
+            <div class="container">
+                <div class="row text-white w-header">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <form id="f_locator">
+                                    <input type="text" id="location" data-tooltip="#w-search-tip">
+                                </form>
+                                <span class="glyphicon glyphicon-map-marker"></span>
+                            </div>
+                            <div class="col-xs-5 text-right"><span id="date"></span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-xs-offset-9 text-right">
+                                <div class="unit-block text-accent text-left">
+                                    <div class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="unit-switch" checked>
+                                        <label class="onoffswitch-label" for="unit-switch">
+                                            <span class="onoffswitch-inner"></span>
+                                            <span class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div>
+
+                                    <!-- <div id="dark-mode" class="onoffswitch">
+                                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="unit-switch" checked>
+                                        <label class="onoffswitch-label" for="nothing">
+                                            <span id = "something" class="onoffswitch-inner"></span>
+                                            <span id="dark-mode-switch" class="onoffswitch-switch"></span>
+                                        </label>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-white w-main">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                            <div class="text-center">
+                                <i id="wicon-main" class="wi wi-main"></i>
+                                <span id="temperature"></span>
+                            </div>
+                        <div class="row">
+                            <div class="col-xs-12 w-desc-box">
+                                <p id="description" class="text-capitalize"></p>
+                                <p><span id="humidity"></span> <i class="wi wi-humidity"></i> Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container card-section">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                    <div class="days-box row text-center bg-white">
+                        <div class="col-xs-3 day-first">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                            <p class="day"></p>
+                            <hr class="hr-title hr-title-primary">
+                            <p><i class="wi"></i></p>
+                            <p><span class="d-min-temp"></span> <span class="d-max-temp"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <script src="index.js"></script>  
+  
+</body>
+</html>
